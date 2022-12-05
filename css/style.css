@@ -1,0 +1,207 @@
+/* start global rules  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --theme-text-color: white;
+  --theme-background: hsl(222, 26%, 31%);
+  --theme-elements-background: hsl(223, 31%, 20%);
+  --theme-alt-elements-background: hsl(6, 63%, 50%);
+  --theme-buttons-color: hsl(221, 14%, 31%);
+  --theme-buttons-background: hsl(30, 25%, 89%);
+  --theme-buttons-border-background: hsl(29, 16.2%, 64.9%);
+  --theme-lighter-background: hsl(225, 20.8%, 49%);
+  --theme-lighter-border-color: hsl(221, 28%, 38%);
+  --theme-special-background: hsl(6, 63.1%, 50%);
+  --theme-special-border-color: rgb(196, 26, 7);
+  --theme-special-ele-color: white;
+  /* start theme 1  */
+  /* --theme1-text-color: white;
+  --theme1-background: hsl(222, 26%, 31%);
+  --theme1-elements-background: hsl(223, 31%, 20%);
+  --theme1-alt-elements-background: hsl(6, 63%, 50%);
+  --theme1-buttons-color: hsl(221, 14%, 31%);
+  --theme1-buttons-background: hsl(30, 25%, 89%);
+  --theme1-buttons-border-background: hsl(29, 16.2%, 64.9%);
+  --theme1-lighter-background: hsl(225, 20.8%, 49%);
+  --theme1-lighter-border-color: hsl(221, 28%, 38%);
+  --theme1-special-background: hsl(6, 63.1%, 50%);
+  --theme1-special-border-color: rgb(196, 26, 7);
+  --theme1-special-ele-color: white; */
+  /* end theme 1  */
+  /* start theme 2  */
+  /* --theme2-text-color: black;
+  --theme2-background: hsl(0, 0%, 90%);
+  --theme2-elements-background: hsl(0, 5.2%, 81%);
+  --theme2-alt-elements-background: hsl(24.9, 98%, 40%);
+  --theme2-buttons-color: hsl(221, 14%, 31%);
+  --theme2-buttons-background: hsl(45, 7.1%, 89%);
+  --theme2-buttons-border-background: rgb(109, 91, 75);
+  --theme2-lighter-background: hsl(185.3, 41.8%, 37.1%);
+  --theme2-lighter-border-color:rgb(27, 96, 102);
+  --theme2-special-background: hsl(24.9, 98%, 40%);
+  --theme2-special-border-color: rgb(148, 66, 8);
+  --theme2-special-ele-color: white; */
+  /* end theme 2  */
+  /* start theme 3  */
+  /* --theme3-text-color: hsl(52, 100%, 62%);
+  --theme3-background: hsl(268, 75%, 9%);
+  --theme3-elements-background: hsl(267.9, 70.5%, 12%);
+  --theme3-alt-elements-background: hsl(176, 100%, 43.9%);
+  --theme3-buttons-color: hsl(52, 100%, 62%);
+  --theme3-buttons-background: hsl(281.2, 89.4%, 25.9%);
+  --theme3-buttons-border-background: rgb(127, 3, 184);
+  --theme3-lighter-background: hsl(268.2, 47.7%, 21%);
+  --theme3-lighter-border-color:rgb(82, 3, 172);
+  --theme3-special-background: hsl(176, 100%, 43.9%);
+  --theme3-special-border-color: rgb(4, 163, 153);
+  --theme3-special-ele-color: black; */
+  /* end theme 3  */
+
+}
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: var(--theme-background);
+  color: var(--theme-text-color);
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.calculator {
+  width: 27rem;
+}
+@media (max-width: 500px) {
+    html {
+        font-size: 13px;
+    }
+    .calculator {
+        width: 22rem;
+    }
+}
+.lighter {
+  background-color: var(--theme-lighter-background) !important;
+  color: white !important;
+  border-color: var(--theme-lighter-border-color) !important;
+}
+.special {
+  background-color: var(--theme-special-background) !important;
+  color: var(--theme-special-ele-color) !important;
+  border-color: var(--theme-special-border-color) !important;
+}
+/* end global rules  */
+/* start heading  */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading > h1 {
+  font-size: 2.5rem;
+  /* text-transform: uppercase; */
+}
+.heading .theme-container {
+  display: flex;
+  align-items: center;
+}
+.heading .theme-container .theme-changer {
+  margin-bottom: 19%;
+  margin-left: 1rem;
+}
+.heading .theme-container .theme-changer .theme-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.heading .theme-container .theme-changer .theme-numbers p {
+  cursor: pointer;
+}
+.heading .theme-container .theme-changer .theme-box {
+  width: 6rem;
+  height: 2rem;
+  background: var(--theme-elements-background);
+  border-radius: 50px;
+  margin-top: 6px;
+  position: relative;
+}
+.heading .theme-container .theme-changer .theme-box .theme-point {
+  width: 10px;
+  height: 10px;
+  background: var(--theme-alt-elements-background);
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+/* for the first theme it should be left porperty 15%; */
+/* for the second theme it should be left porperty 47%; */
+/* for the third theme it should be left porperty 83%; */
+/* end heading  */
+/* start calculator display  */
+.calculator-display {
+  min-height: 8rem;
+  background-color: var(--theme-elements-background);
+  padding: 1.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  text-align: right;
+  word-wrap: anywhere;
+  margin-bottom: 2rem;
+}
+.calculator-display .previous-operation {
+  margin-bottom: 10px;
+}
+.calculator-display .current-operation {
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* end calculator display  */
+/* start calculator buttons  */
+.calculator-buttons {
+  min-height: 20rem;
+  background-color: var(--theme-elements-background);
+  padding: 1rem;
+  border-radius: 15px;
+}
+.calculator-buttons .calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  grid-template-rows: repeat(5, 3rem);
+  gap: 1rem 1.25rem;
+}
+.calculator-buttons .calc-grid button {
+  border: none;
+  outline: none;
+  background-color: var(--theme-buttons-background);
+  color: var(--theme-buttons-color);
+  text-transform: uppercase;
+  border-radius: 7px;
+  border-bottom: 4px solid var(--theme-buttons-border-background);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.calculator-buttons .calc-grid button:active {
+  transform: translateY(5px);
+}
+.calculator-buttons .calc-grid button[data-delete="reset"] {
+  grid-column: span 2;
+}
+.calculator-buttons .calc-grid button[data-equal] {
+  grid-column: span 2;
+}
+.calculator-buttons .calc-grid button[data-delete] {
+    font-size: 1.5rem;;
+}
+/* end calculator buttons  */

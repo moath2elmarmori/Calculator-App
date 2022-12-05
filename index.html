@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- start calculator  -->
+      <div class="calculator">
+        <!-- start header  -->
+        <header class="heading">
+          <h1>calc</h1>
+          <div class="theme-container">
+            <p>theme</p>
+            <div class="theme-changer">
+              <div class="theme-numbers">
+                <p class="theme-1" data-theme="1">1</p>
+                <p class="theme-2" data-theme="2">2</p>
+                <p class="theme-1" data-theme="3">3</p>
+              </div>
+              <div class="theme-box">
+                <div class="theme-point alt-ele-background"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- end header  -->
+        <!-- start calculator display -->
+        <div class="calculator-display">
+          <div class="previous-operation"></div>
+          <div class="current-operation"></div>
+        </div>
+        <!-- end calculator display -->
+        <!-- start calclutaor buttons  -->
+        <div class="calculator-buttons">
+            <div class="calc-grid">
+                <button data-num="7">7</button>
+                <button data-num="8">8</button>
+                <button data-num="9">9</button>
+                <button class="lighter" data-delete="del">del</button>
+                <button data-num="4">4</button>
+                <button data-num="5">5</button>
+                <button data-num="6">6</button>
+                <button data-operation="+">+</button>
+                <button data-num="1">1</button>
+                <button data-num="2">2</button>
+                <button data-num="3">3</button>
+                <button data-operation="-">-</button>
+                <button data-num=".">.</button>
+                <button data-num="0">0</button>
+                <button data-operation="/">/</button>
+                <button data-operation="*">x</button>
+                <button class="lighter" data-delete="reset">reset</button>
+                <button class="special" data-equal>=</button>
+            </div>
+        </div>
+        <!-- end calclutaor buttons  -->
+      </div>
+      <!-- end calculator  -->
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
